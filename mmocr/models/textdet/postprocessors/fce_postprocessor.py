@@ -205,6 +205,8 @@ class FCEPostprocessor(BaseTextDetPostProcessor):
                 points = cv2.boxPoints(cv2.minAreaRect(poly))
                 points = np.int0(points)
                 new_polys.append(points.reshape(-1))
+                # x, y, w, h = cv2.minAreaRect(poly)
+                # new_polys.append([x, y, x+w, y, x+w, y+h. x. y+h]) 
 
             return new_polys, result_scores
         return result_polys, result_scores
