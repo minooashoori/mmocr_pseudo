@@ -38,8 +38,8 @@ def merge_parquet_files(input_folder, output_file):
     return num_duplicates, num_rows_final
 
 # Specify input folder containing Parquet files and output file path
-input_folder = 'logofusion02/train&val/'
-output_file = 'logofusion02/train&val/merged_file.parquet'
+input_folder = 'logo05/train/'
+output_file = 'logo05/train/merged_file.parquet'
 
 # Merge Parquet files and remove duplicates based on 'asset_id'
 num_duplicates, num_rows_final = merge_parquet_files(input_folder, output_file)
